@@ -18,7 +18,7 @@ class Object{
 //default: private
 
 public:    
-
+    Object(int i);
 private:
 
 protected:
