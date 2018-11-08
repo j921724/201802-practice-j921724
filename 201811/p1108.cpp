@@ -26,3 +26,10 @@ void Name::foo(char first){ //이렇게 되면 argument로 들어온 first와 cl
 상속받은 관계에서는
 생성할 때: parent constructor -> child constructor -> grandchild constructor
 없앨 때: grandchild constructor -> child constructor -> parent constructor
+
+-set
+-get
+-const: member function 안에서 값을 수정할 수 없음
+        포인터로 데이터를 받을 때 자주 사용함
+-composition: 다른 데이터를 부품으로 쓰는 것 
+-friendship: 양방향성을 가지지 않는다
