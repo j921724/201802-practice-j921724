@@ -1,0 +1,2 @@
+- member function 에서는 static/member variable 사용가능
+- static member function에서는 static variable 사용가능 member variable 사용 불가능 
