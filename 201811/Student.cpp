@@ -1,6 +1,7 @@
 #include "Student.h"
 
 #include <cstring>
+#include <iostream>
 
 Student::Student()
 :_id(0), _name(nullptr)
@@ -19,9 +20,9 @@ Student::Student(const char* _value)
 Student::Student(const Student& rhs)
 {
     this->_id = rhs._id;
-    this->_name = new char[strlen(rhs.name)+1];
-    strcpy(this->_name, rhs.name);
-    this->_name[strlen(rhs.name)] = '\0';
+    this->_name = new char[strlen(rhs._name)+1];
+    strcpy(this->_name, rhs._name);
+    this->_name[strlen(rhs._name)] = '\0';
 }
 
 int Student::get_id()
@@ -31,7 +32,9 @@ int Student::get_id()
 
 Student::~Student()
 {
-    strcpy(_name, "!!!!!!");    
+    //strcpy(_name, "!!!!!!");    
+    delete [] _name;
+    std::cout << "Destructed" << std::endl;
 }
 
 void Student::set_id(int _value)
