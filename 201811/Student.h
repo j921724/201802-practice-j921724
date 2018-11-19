@@ -13,6 +13,10 @@ public:
     Student(const char* _value); // 2. Initializer 
     // 3. option 3
     
+    Student(const Student& rhs);
+    
+    ~Student();
+    
 public:
     int get_id();
     void set_id(int _value);
