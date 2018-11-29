@@ -41,7 +41,27 @@ public:
     void draw()
     {
         std::cout << "Center: (" << _center.get_x() << ", " << _center.get_y() << 
-                    ") Radius: " << _radius << std::endl;
+                    ") Radius:" << _radius << std::endl;
+    }
+};
+
+class Rectangle : public Shape
+{
+private:
+    Point _top_left;
+    Point _bottom_right;
+    
+public:
+    Rectangle(int x1, int y1, int x2, int y2)
+    :_top_left(x1, y1), _bottom_right(x2, y2)
+    {
+        
+    }
+    
+    void draw()
+    {
+        std::cout << " (" << _top_left.get_x() << ", " << _top_left.get_y() << ") " 
+        << " (" << _bottom_right.get_x() << ", " << _bottom_right.get_y() << ")" << std::endl;
     }
 };
 
@@ -81,6 +101,24 @@ int main()
                 std::cin >> r;
                 
                 shape_list.push_back(new Circle(x, y, r));
+            }
+            break;
+        case 2:
+            {
+                int x, y, x2, y2;
+                std::cout << "X1:";
+                std::cin >> x;
+                
+                std::cout << "Y1:";
+                std::cin >> y;
+                
+                std::cout << "X2:";
+                std::cin >> x2;
+                
+                std::cout << "Y2:";
+                std::cin >> y2;
+                
+                shape_list.push_back(new Rectangle(x, y, x2, y2));
             }
             break;
         }
