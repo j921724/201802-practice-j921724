@@ -41,7 +41,7 @@ public:
     void draw()
     {
         std::cout << "Center: (" << _center.get_x() << ", " << _center.get_y() << 
-                    ") Radius:" << _radius << std::endl;
+                    ") Radius: " << _radius << std::endl;
     }
 };
 
